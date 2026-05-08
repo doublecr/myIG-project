@@ -1,0 +1,255 @@
+.stories-bar {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  overflow-x: auto;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.stories-bar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+.story-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 74px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.story-item:active {
+  transform: scale(0.95);
+}
+
+.story-avatar {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-avatar.has-story {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  padding: 3px;
+  transition: transform 0.2s ease;
+}
+
+.story-avatar.viewed {
+  background: #333;
+  padding: 1px;
+}
+
+.story-avatar.viewed img {
+  border: 2px solid var(--bg-primary);
+}
+
+.story-item:hover .story-avatar.has-story {
+  transform: rotate(15deg) scale(1.05);
+}
+
+.story-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--bg-primary);
+  border: 2px solid var(--bg-primary); /* The white gap between image and ring */
+}
+
+.story-username {
+  font-size: 12px;
+  color: var(--text-primary);
+  width: 74px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.own-story .story-avatar img {
+  border: none; /* No gap for the 'Your Story' if it doesn't have a ring yet */
+}
+
+.add-story-badge {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  background-color: #0095f6; /* Instagram Blue */
+  border: 2px solid var(--bg-primary);
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.add-story-badge svg {
+  stroke-width: 3.5px;
+}
+
+.mention-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 4000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mention-modal {
+  width: 100%;
+  max-width: 400px;
+  background-color: #262626;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: modalPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modalPop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.mention-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.mention-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #363636;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #8e8e8e;
+}
+
+.mention-search input {
+  background: none;
+  border: none;
+  color: white;
+  flex: 1;
+  outline: none;
+}
+
+.search-results {
+  max-height: 250px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-user-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.search-user-item .user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-weight: 500;
+}
+
+.search-user-item .user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #555;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox.checked {
+  background-color: #0095f6;
+  border-color: #0095f6;
+}
+
+.selected-mentions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid #363636;
+}
+
+.mention-tag {
+  background-color: #0095f6;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mention-tag svg {
+  cursor: pointer;
+}
+
+.story-share-btn {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.story-share-btn:hover {
+  background-color: #1877f2;
+}
+@media (max-width: 767px) {
+  .stories-bar {
+    padding: 8px 16px;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .story-item {
+    min-width: 66px;
+  }
+  .story-avatar {
+    width: 58px;
+    height: 58px;
+  }
+  .story-username {
+    width: 66px;
+    font-size: 11px;
+  }
+}

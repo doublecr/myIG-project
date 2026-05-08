@@ -1,0 +1,79 @@
+.activity-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.activity-page h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.activity-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0;
+  color: var(--text-secondary);
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.activity-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.activity-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.activity-text {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.activity-time {
+  display: block;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.request-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.confirm-btn {
+  background-color: var(--accent);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.delete-btn {
+  background-color: var(--bg-secondary);
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.no-activity {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-top: 50px;
+}

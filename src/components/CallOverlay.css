@@ -1,0 +1,123 @@
+.call-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  overflow: hidden;
+}
+
+.call-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.call-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(20px) brightness(0.5);
+}
+
+.glass-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.call-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 20px;
+}
+
+.call-info {
+  text-align: center;
+}
+
+.call-avatar-main {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+.call-avatar-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.call-info h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.call-status {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.call-controls {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.control-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.control-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-btn.active {
+  background-color: white;
+  color: black;
+}
+
+.control-btn.hangup {
+  background-color: var(--error);
+}
+
+.control-btn.hangup:hover {
+  background-color: #d32f2f;
+}
+
+.video-stream-main {
+  width: 90%;
+  max-width: 400px;
+  height: 60%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}

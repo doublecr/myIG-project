@@ -1,0 +1,118 @@
+.reels-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+.reels-container {
+  width: 100%;
+  max-width: 450px;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+}
+
+.reels-container::-webkit-scrollbar {
+  display: none;
+}
+
+.reel-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  scroll-snap-align: start;
+}
+
+.reel-video-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.reel-video-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.6));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  color: white;
+}
+
+.reel-right-actions {
+  position: absolute;
+  right: 12px;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.reel-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.reel-action span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.reel-bottom-info {
+  margin-bottom: 20px;
+  max-width: 85%;
+}
+
+.reel-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.reel-user img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.reel-user span {
+  font-weight: 600;
+}
+
+.follow-reel-btn {
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.reel-caption {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.loading-reels {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+}

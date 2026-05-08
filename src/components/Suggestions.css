@@ -1,0 +1,103 @@
+.suggestions {
+  padding: 16px 0;
+}
+
+.current-user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--bg-secondary);
+  margin-right: 12px;
+}
+
+.profile-avatar.main {
+  width: 44px;
+  height: 44px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.fullname, .relation {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.switch-btn, .see-all, .follow-btn {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.switch-btn:hover, .see-all:hover, .follow-btn:hover {
+  color: var(--text-primary);
+}
+
+.suggestions-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.suggestions-header span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.follow-btn {
+  color: var(--accent);
+}
+
+.sidebar-footer {
+  margin-top: 32px;
+}
+
+.sidebar-footer nav {
+  font-size: 12px;
+  color: #c7c7c7;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.sidebar-footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar-footer a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #c7c7c7;
+  text-transform: uppercase;
+}
